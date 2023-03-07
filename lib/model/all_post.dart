@@ -3,7 +3,7 @@ import "dart:convert"; // It's for jsonDecode();
 import "package:http/http.dart" as http;
 
 class AllPost {
-  var url = "https://internetkidunya.com/wp-json/wp/v2/posts?_embed&per_page=42";
+  var url = "https://internetkidunya.com/wp-json/wp/v2/posts?_embed&per_page=100";
   // var ok = "http://jsonplaceholder.typicode.com/posts";
  
   Future<List> getPosts() async {

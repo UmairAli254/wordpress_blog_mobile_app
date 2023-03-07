@@ -1,5 +1,4 @@
 import "dart:convert";
-
 import "package:flutter/material.dart";
 import "../pages/latest.dart";
 import "my_drawer.dart";
@@ -16,11 +15,9 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   var data;
 
-  // var all_categories = cate.getCategories();
   @override
   void initState() {
     super.initState();
-
     _tabController = TabController(
       length: 3,
       vsync: this,
@@ -84,8 +81,8 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
               ),
               tabs: const [
                 Text("Latest"),
-                Text("Freelancing"),
-                Text("WordPress"),
+                Text("FrontEnd"),
+                Text("BackEnd"),
               ],
             ),
           ),
@@ -94,8 +91,18 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
             controller: _tabController,
             children: [
               Latest(),
-              Text("Homdde"),
-              Text("Homdsde"),
+              Center(
+                child: Text(
+                  "Frontend",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+              Center(
+                child: Text(
+                  "Backend",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
             ],
           )),
     );
